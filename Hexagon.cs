@@ -9,32 +9,30 @@ namespace Lab_1_1
 {
     class Hexagon: Figure
     {
-        int x1, y1, x2, y2, x3, y3, x4, y4, x5, y5, x6, y6;
-
         public Hexagon(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4, int x5, int y5, int x6, int y6)
         {
-            this.x1 = x1;
-            this.y1 = y1;
-            this.x2 = x2;
-            this.y2 = y2;
-            this.x3 = x3;
-            this.y3 = y3;
-            this.x4 = x4;
-            this.y4 = y4;
-            this.x5 = x5;
-            this.y5 = y5;
-            this.x6 = x6;
-            this.y6 = y6;
+            point.Add(x1);
+            point.Add(y1);
+            point.Add(x2);
+            point.Add(y2);
+            point.Add(x3);
+            point.Add(y3);
+            point.Add(x4);
+            point.Add(y4);
+            point.Add(x5);
+            point.Add(y5);
+            point.Add(x6);
+            point.Add(y6); 
         }
 
         public override void PrintFigure(Pen pen, Graphics graphic)
         {
-            Point a = new Point(x1, y1);
-            Point b = new Point(x2, y2);
-            Point c = new Point(x3, y3);
-            Point d = new Point(x4, y4);
-            Point e = new Point(x5, y5);
-            Point f = new Point(x6, y6);
+            Point a = new Point(point[0], point[1]);
+            Point b = new Point(point[2], point[3]);
+            Point c = new Point(point[4], point[5]);
+            Point d = new Point(point[6], point[7]);
+            Point e = new Point(point[8], point[9]);
+            Point f = new Point(point[10], point[11]);
 
             graphic.DrawLine(pen, a, b);
             graphic.DrawLine(pen, b, c);

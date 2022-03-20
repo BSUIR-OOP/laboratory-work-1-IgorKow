@@ -9,20 +9,18 @@ namespace Lab_1_1
 {
     class Segment: Figure
     {
-        int x1, y1, x2, y2;
-
         public Segment(int x1, int y1, int x2, int y2)
         {
-            this.x1 = x1;
-            this.y1 = y1;
-            this.x2 = x2;
-            this.y2 = y2;
+            point.Add(x1);
+            point.Add(y1);
+            point.Add(x2);
+            point.Add(y2);
         }
 
         public override void PrintFigure(Pen pen, Graphics graphic)
         {
-            Point a = new Point(x1, y1);
-            Point b = new Point(x2, y2);
+            Point a = new Point(point[0], point[1]);
+            Point b = new Point(point[2], point[3]);
 
             graphic.DrawLine(pen, a, b);
         }

@@ -9,19 +9,17 @@ namespace Lab_1_1
 {
     class Rectangle: Figure
     {
-        int x, y, width, height;
-
         public Rectangle(int x, int y, int width, int height)
         {
-            this.x = x;
-            this.y = y;
-            this.width = width;
-            this.height = height;
+            point.Add(x);
+            point.Add(y);
+            point.Add(width);
+            point.Add(height);
         }
 
         public override void PrintFigure(Pen pen, Graphics graphic)
         {
-            graphic.DrawRectangle(pen, x, y, width, height);
+            graphic.DrawRectangle(pen, point[0], point[1], point[2], point[3]);
         }
 
     }

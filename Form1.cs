@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace Lab_1_1
 {
@@ -62,6 +63,17 @@ namespace Lab_1_1
         {
             graphic.Clear(BackColor);
             list[4].PrintFigure(pen, graphic);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < 6; i++)
+            {
+                graphic.Clear(BackColor);
+                list[i].PrintFigure(pen, graphic);
+                Thread.Sleep(1000);
+            }
+
         }
     }
 }
