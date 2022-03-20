@@ -9,8 +9,6 @@ namespace Lab_1_1
 {
     class Circle: Figure
     {
-        int x, y, width, height;
-
         public Circle(int x, int y, int width, int height)
         {
             point.Add(x);
