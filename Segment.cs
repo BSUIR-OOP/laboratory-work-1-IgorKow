@@ -9,12 +9,12 @@ namespace Lab_1_1
 {
     class Segment: Figure
     {
-        public Segment(int x1, int y1, int x2, int y2)
+        public Segment(int[] ArrayPoints)
         {
-            point.Add(x1);
-            point.Add(y1);
-            point.Add(x2);
-            point.Add(y2);
+            for (int i = 0; i < 4; i++)
+            {
+                point.Add(ArrayPoints[i]);
+            }
         }
 
         public override void PrintFigure(Pen pen, Graphics graphic)

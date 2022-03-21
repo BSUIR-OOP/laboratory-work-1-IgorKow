@@ -9,16 +9,12 @@ namespace Lab_1_1
 {
     class Trapezium : Figure
     {
-        public Trapezium(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4)
+        public Trapezium(int[] ArrayPoints)
         {
-            point.Add(x1);
-            point.Add(y1);
-            point.Add(x2);
-            point.Add(y2);
-            point.Add(x3);
-            point.Add(y3);
-            point.Add(x4);
-            point.Add(y4);
+            for (int i = 0; i < 8; i++)
+            {
+                point.Add(ArrayPoints[i]);
+            }
         }
 
         public override void PrintFigure(Pen pen, Graphics graphic)

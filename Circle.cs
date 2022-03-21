@@ -9,12 +9,12 @@ namespace Lab_1_1
 {
     class Circle: Figure
     {
-        public Circle(int x, int y, int width, int height)
+        public Circle(int[] ArrayPoints)
         {
-            point.Add(x);
-            point.Add(y);
-            point.Add(width);
-            point.Add(height);
+            for (int i = 0; i < 4; i++)
+            {
+                point.Add(ArrayPoints[i]);
+            }
         }
 
         public override void PrintFigure(Pen pen, Graphics graphic)
